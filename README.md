@@ -1,7 +1,7 @@
 # Data_Analyst_Nisarg_Patel
 # 🎓 UCW Academic Department AWS Cloud Management
 
-  This project builds a serverless, end‑to‑end AWS pipeline for UCWA’s academic department to analyze workload distribution. I ingest CSV into S3, profile and clean the data via Glue DataBrew, transform and enrich it using Glue ETL and crawlers, then catalogue and query it in Athena. The result is a scalable, maintainable analytics workflow that provides timely insights for academic planning and resourcing.
+This project builds a serverless, end‑to‑end AWS pipeline for UCWA’s academic department to analyze workload distribution. I ingest CSV into S3, profile and clean the data via Glue DataBrew, transform and enrich it using Glue ETL and crawlers, then catalogue and query it in Athena. The result is a scalable, maintainable analytics workflow that provides timely insights for academic planning and resourcing.
 ---
 
 ## 1. Project Overview
@@ -272,6 +272,27 @@ Image 19: Data Profiling and Cleaning
 Image 20: Data Analysis
 
 <img width="1784" alt="Screenshot 2025-06-23 at 11 14 22 PM" src="https://github.com/user-attachments/assets/ac792b3f-2be3-4219-a4ff-74ff3c8c8418" />
+---
+
+**Support Plan**
+
+    -  Department: Academic
+    - Chosen Plan: Developer Support Plan
+    - Reasoning: This plan is well-suited for development and testing purposes, offering technical assistance during business hours while keeping costs low.
+
+**AWS module 2 knowledge check**
+
+Image 21: Module 2
+
+![Screenshot 2025-06-23 at 11 36 41 PM](https://github.com/user-attachments/assets/c44e7f39-eb76-466a-83d9-7fcfab241bf4)
+
+---
+
+**AWS Global infrastructure**
+
+
+
+
 
 
 
