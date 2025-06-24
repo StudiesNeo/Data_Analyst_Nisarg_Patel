@@ -7,7 +7,7 @@
 ## 1. Project Overview
 
 - **Title:** Perform descriptive analysis to identify whether the student demographics are linked to a lower retention rate.    
-- **Scope:** Examine how student demographics—such as student ID, enrollment status, ethnicity, age relate to lower retention rates to identify at-risk groups.
+- **Scope:** Examine how student demographics—such as student ID, enrollment status, ethnicity, and age relate to lower retention rates to identify at-risk groups.
 
 ---
 
@@ -236,8 +236,52 @@ Image 15: Data Location and Modelling
 
   -  This module strengthened my core understanding of cloud computing, highlighting how cloud models offer significantly greater agility, cost savings, and governance compared to traditional university IT infrastructure.
 
-    
+AWS Academy Module 1 Knowledge Check
+
+Image 16: Module 1 Knowledge Check
+<img width="951" alt="Screenshot 2025-06-23 at 10 38 21 PM" src="https://github.com/user-attachments/assets/f0b0be21-ca68-4691-bf35-c7a63fa6d44e" />
+
 ---
+
+**AWS Cost Analysis**
+
+**Total Cost of Ownership – Delaware North (Paraphrased):**
+
+Delaware North’s transition to AWS resulted in significant cost savings and enhanced efficiency. The company retired 205 servers, cutting \$3.5 million in expenses over five years. Additionally, it shortened deployment timelines from several weeks to just one day. By moving to AWS, Delaware North boosted agility while substantially lowering infrastructure costs and speeding up operations, making it a smart choice for organizations aiming for high returns on investment.
+
+Image 17: Total cost of ownership - Delaware North
+
+![Screenshot 2025-06-23 at 10 47 42 PM](https://github.com/user-attachments/assets/f1562af9-43f6-442d-bfbb-84af68a452b9)
+
+---
+**AWS Pricing Calculator**
+
+Three components were calculated for an academic data project:
+1.	Data Ingestion – $15.48/year
+2.	Data Profiling and cleaning – $46.44/year
+3.	Data Analysis using Athena – $86.76/year
+
+Image 18: Data storage 
+
+<img width="1784" alt="Screenshot 2025-06-23 at 11 02 05 PM" src="https://github.com/user-attachments/assets/19c99bdc-d91b-4af6-8c0e-f6558c777a03" />
+
+Image 19: Data Profiling and Cleaning
+
+<img width="1784" alt="Screenshot 2025-06-23 at 11 07 54 PM" src="https://github.com/user-attachments/assets/8c267cce-f875-4cc0-b5d7-628de020276c" />
+
+Image 20: Data Analysis
+
+<img width="1784" alt="Screenshot 2025-06-23 at 11 14 22 PM" src="https://github.com/user-attachments/assets/ac792b3f-2be3-4219-a4ff-74ff3c8c8418" />
+
+
+
+
+
+
+
+
+
+
 
 
 
