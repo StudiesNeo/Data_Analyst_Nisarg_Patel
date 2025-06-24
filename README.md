@@ -290,6 +290,21 @@ Image 21: Module 2
 
 **AWS Global infrastructure**
 
+Academic workloads were strategically divided among AWS services based on access needs and data sensitivity:
+
+      - Edge Locations were used to deliver frequently accessed reports quickly.
+      - Regional Edge Cache stored temporary course lists for faster local retrieval.
+      - AWS Region (N. Virginia) housed complete datasets—such as faculty workloads and course enrollment records—ensuring secure, compliant storage.
+
+| **Type**        | **Purpose**                            | **Access Method**             | **Data Sensitivity**                       |
+| --------------- | -------------------------------------- | ----------------------------- | ------------------------------------------ |
+| Regional Cache  | Temporary course list caching          | Local rapid access            | Low sensitivity (e.g., course identifiers) |
+| Edge Location   | Faculty dashboards and reports         | Cached report access          | Aggregated and anonymized data             |
+| AWS Region (S3) | Full academic dataset (faculty/course) | Processed via Athena/DataBrew | High sensitivity (includes names and IDs)  |
+
+Image 22: AWS Global infrastructure
+
+![Screenshot 2025-06-23 at 11 56 43 PM](https://github.com/user-attachments/assets/ca32b9d4-7fca-4c8e-9b81-cec6697fa960)
 
 
 
