@@ -6,74 +6,192 @@
 
 ## 1. Project Overview
 
-- **Title:** Perform descriptive analysis to optimize faculty workload and streamline the process.   
-- **Scope:** Design and implement secure landing zones and perform the analytical operations for UCW’s Academic department and Analytics workflows  
+- **Title:** Perform descriptive analysis to identify whether the student demographics are linked to a lower retention rate.    
+- **Scope:** Examine how student demographics—such as student ID, enrollment status, ethnicity, age relate to lower retention rates to identify at-risk groups.
 
 ---
 
-## 2. Objectives
+## 2. Activities Performed 
 
-1. **Landing Zone Design**  
-   - Build isolated AWS accounts/environments (Dev vs Prod) using **AWS Control Tower** and **Organizations** for centralized governance :contentReference[oaicite:1]{index=1}  
-2. **Security & Compliance**  
-   - Apply Service Control Policies (SCPs), segregated IAM roles, AWS Security Hub, and CloudTrail for visibility and enforcement :contentReference[oaicite:2]{index=2}  
-3. **Registrar Office High Availability**  
-   - Deploy two EC2 web servers (IIS on Windows) in multi-AZ subnets, with hosting for “Registrar’s Office” website and backup automation  
-4. **Academic Data Analytics Environment**  
-   - Build ETL pipelines for operational data (.CSV from Course_Evaluation), storing results in S3 and analyzing via AWS Lambda, Athena, or Amazon RDS  
-5. **Governance, Cost & Monitoring**  
-   - Enable AWS Cost Explorer, generate billing alerts, and compile metrics dashboards in Amazon CloudWatch / QuickSight  
+**Business Question Development**  
+   - Which student demographics are associated with lower retention rates?
+   - Developed goals and objectives
+   - Identified the cause factors
+   - Created an organized Excel file for structured analysis.
 
+Image 1: Structured data file 
+<img width="1786" alt="Screenshot 2025-06-23 at 4 22 05 PM" src="https://github.com/user-attachments/assets/5c50bd46-3f57-4305-bdcb-ca36353471e4" />
+
+**Fishbone Diagram** 
+   - Using a Fishbone diagram, visualize the cause factors related to the student demographics.
+
+Image 2: Fishbone diagram for cause factor analysis.
+<img width="1785" alt="Fishbone Design" src="https://github.com/user-attachments/assets/8324a0f3-0ec3-4293-b729-8893e7261279" />
+
+**Designed and organized **
+S3 data lake bucket: `academic-raw-nis` with folders for:**
+   - Course Enrollments
+   - Faculty Assignments
+   - Student Demographics
+   - Academic Performance
+   - Graduation and Retention
+
+Image 3: S3 bucket creation and storage location.
+<img width="1785" alt="Database Design" src="https://github.com/user-attachments/assets/3cd686cc-a3e7-40e4-9f7a-8eb468481587" />
+
+**AWS Environment Configuration**
+  1. Configured AWS essentials for cloud architecture.
+     - **Custom VPC**: `Academic-VPC-nis`
+     - **Security Group**: `Academic-SG-nis`
+     - **Network Interface**: `Academic-NIC-nisarg`
+     - **EC2 Instance** for secure analytics
+
+**Designed the Data Lack Visuals**
+   - Designed the data lake visualization to understand cloud architecture more clearly. 
+
+Image 4: Data lack Design
+<img width="1785" alt="Data Lake Design" src="https://github.com/user-attachments/assets/e1c744ae-50a7-4e5e-a073-5d5a4a913b68" />
+
+**Tools**
+     - Excel
+     - Draw.io
+     - AWS S3
+     - AWS EC2
+     - AWS CLI
+
+**Deliverables**
+     - Business analysis in Excel format
+     - Cause-and-effect (Fishbone) diagram
+     - Data lake folder hierarchy in AWS S3
+     - AWS Academy progress report (PDF)
+
+Week 3 – Data Profiling, Cleaning & Cost Evaluation
+
+**Project Title**: Data Quality Enhancement and AWS Cost Analysis for Student Retention Analysis.
+
+**Objective**:
+Profile and clean Week 2 datasets, then estimate the monthly and annual AWS costs for storing them in S3 and processing them with Glue DataBrew using the AWS Pricing Calculator.
+
+**Activities Performed:**
+
+    Cost Evolution 
+    
+    - Used AWS Pricing Calculator to evaluate S3 storage and request costs
+    - Parameters:
+    - 1 GB storage
+    - Region: US East (N. Virginia)
+    - Monthly cost: ~$0.02  
+    - Annual estimate: ~$0.24 
+
+Image 5: Cost Estimation 
+<img width="873" alt="Screenshot 2025-06-23 at 5 05 16 PM" src="https://github.com/user-attachments/assets/e0f9d62e-f9a8-4e22-bcab-97ef9c3e12a8" />
+
+2.	Data Cleaning & Profiling:
+   
+    - Employed AWS Glue DataBrew to profile and cleanse academic datasets using its visual, no-code transformations.
+    - Removed null entries, deduplicated data, and standardized formats (e.g., dates, names) across datasets
+    - Exported cleaned data in Parquet and CSV formats to structured S3 storage
+    - Documented transformation steps in Excel to ensure transparency, reproducibility, and auditability
+
+Image 6: Data Profile Overview. 
+
+![image](https://github.com/user-attachments/assets/c63a0d91-93f1-4669-bacb-fcc08cd35e58)
+
+Image 7: Projects 
+
+![image](https://github.com/user-attachments/assets/93398d69-e883-4224-a009-02a173948c1d)
+
+**Tools Used:**
+
+* AWS S3,
+* AWS Glue DataBrew,
+* AWS Pricing Calculator,
+* Excel
+
+**Deliverables:**
+
+* Cleaned datasets (CSV/Parquet)
+* Cost analysis report (PDF)
+* Data profiling metrics
+* Data-cleaning design documented in Excel
+
+**Key Insights**
+* Minimal S3 storage cost validates scalability and budget-friendliness, making it ideal for expanding data lakes
+* Cleaned, analytics-ready datasets (CSV/Parquet) facilitate seamless downstream processing
+* Profiling revealed enhanced data consistency, ensuring reliable academic workload metrics
+
+**Week 4 – ETL Pipeline: Enrichment and Summarization**
+
+**Project Title: Building an End-to-End ETL Pipeline to Enrich Student Demographics for Retention Analysis**
+
+**Objective:**
+  - Design and implement an automated ETL pipeline leveraging AWS to integrate, transform, enrich, and summarize student demographic and academic datasets, enabling data-driven insights into factors affecting retention.
+
+**Activities Performed:**
+
+**ETL Pipeline Design*
+
+**Extraction:** Retrieved cleaned demographic and retention data from the “cleaning zone” in S3.
+
+**Data Joins for Enrichment:*
+
+Applied INNER JOINs to combine student demographics with retention records, ensuring linked data for analysis.
+
+Used LEFT JOINs to capture demographic records.
+
+*Standardization:* Normalized categorical demographic attributes (e.g., gender, ethnicity) and student ID fields consistently across datasets.
+
+Image 8: DAP Design 
+
+![W4_Drawio](https://github.com/user-attachments/assets/fc2d143f-bb8c-4c57-92fd-6cb8781aa3b9)
+
+Image 9: ETL
+
+![W4_Visual_ETL](https://github.com/user-attachments/assets/671164d1-36b8-40ea-8365-d55dfa921862)
+
+**2. Summarization**
+
+    - Utilized Amazon Athena to run reusable SQL queries that:
+    - Calculated average faculty workload
+    - Identified the count of overburdened faculty
+    - Analyzed weekly trends in faculty load versus course demand
+    - All query scripts were documented for future reference and reuse.
+
+Image 10: Analytical Quary 
+
+![W4_Gender_Query](https://github.com/user-attachments/assets/4ed3b31b-4184-411c-8322-428163d44a60)
+
+Image 11: Cost Estimation 
+
+![W5_Billing](https://github.com/user-attachments/assets/49341fc7-9054-48ba-b268-c6c86ce704da)
+
+4.	Output & Storage:
+
+    •	Final data exported to **S3 curated zone**:
+    •	Output formats: CSV, JSON, Parquet
+
+Image 12: Output and Storage 
+![W4_Datacatalog](https://github.com/user-attachments/assets/6ff901dd-7fe5-465a-9930-54f0f4c77002)
+
+**Tools Utilized:**
+
+AWS Glue Studio · AWS Athena · CloudWatch · draw.io · Excel 
+
+**Deliverables Produced:**
+
+    - Curated, processed datasets
+    - ETL job designs and executable scripts
+    - ETL cost analysis report (PDF)
+    - Athena query result summaries
+    - CloudWatch alert and monitoring configurations 
+
+
+**Key Findings:**
+
+    - 28% of faculty teach more than four courses during peak semesters
+    - Week 2 of each term consistently emerges as the highest workload period
+    - Data enrichment enabled precise insights at the department level
 ---
 
-## 3. Methodology
 
-### Phase A – **Assess & Plan**
-- Conducted readiness assessments using **AWS Cloud Adoption Framework** (CAF) focusing on Business, People, and Governance :contentReference[oaicite:3]{index=3}  
-- Identified key migrations: Registrar's web app with high availability and the academic analytics pipeline  
-
-### Phase B – **Landing Zone Implementation**
-- Configured **AWS Control Tower** to orchestrate AWS Organizations with two Organizational Units (OUs): _Dev_ and _Prod_  
-- Applied SCPs to restrict production resources, enforce encryption, and limit public access  
-
-### Phase C – **Web App Migration**
-- Provisioned EC2 instances in separate AZs under Prod OU  
-- Installed IIS on Windows, deployed Registrar’s web portal, configured ELB for HA and failover  
-- Scheduled AMI backups and automated snapshot lifecycle policies  
-
-### Phase D – **Analytics Pipeline**
-- Set up S3 buckets for raw and processed data (no public access)  
-- Deployed AWS Lambda & Glue jobs to parse CSV, transform data, and load into Athena tables  
-- Enabled encryption using AWS KMS customer-managed keys (CMKs) for data at rest  
-
-### Phase E – **Governance & Monitoring**
-- Enabled **AWS Security Hub**, **IAM Identity Center**, **Config**, **GuardDuty**, and **CloudTrail**  
-- Centralized logs and metrics via **CloudWatch dashboards**  
-- Enabled **Cost Explorer** & configured budget alerts  
-
----
-
-## 4. Architecture Diagram
-
-![Architecture Diagram](docs/architecture-diagram.png)
-*Illustrates OUs, networking, web and data pipelines in Dev & Prod environments.*
-
----
-
-## 5. Tools & Technologies
-
-- **Infrastructure as Code**: AWS Control Tower, CloudFormation, AWS CLI  
-- **Compute & Storage**: EC2 (Windows/IIS), Elastic Load Balancer, S3  
-- **ETL & Analytics**: AWS Lambda, AWS Glue, Athena  
-- **Governance & Security**: Organizations, SCPs, IAM Identity Center, Security Hub, KMS, Config, CloudTrail  
-- **Monitoring & Cost**: CloudWatch, Cost Explorer, Budgets  
-
----
-
-## 6. Deliverables
-
-- **IaC Templates**: Control Tower configuration & CloudFormation scripts under `infrastructure/`  
-- **Automated Deployment**: CI/CD pipeline (GitHub Actions) under `.github/workflows/ci-cd.yml`  
-- **Analysis Pipeline Code**: Python Lambda/Glue scripts under `src/etl/`  
-- **Dashboards**: CloudWatch, Athena queries, QuickSight
 
