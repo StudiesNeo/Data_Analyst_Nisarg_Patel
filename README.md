@@ -306,6 +306,13 @@ Image 22: AWS Global infrastructure
 
 ![Screenshot 2025-06-23 at 11 56 43 PM](https://github.com/user-attachments/assets/ca32b9d4-7fca-4c8e-9b81-cec6697fa960)
 
+**Module 3 Knowledge**
+
+Image: Module 3 
+
+<img width="956" alt="Screenshot 2025-06-24 at 12 00 45 AM" src="https://github.com/user-attachments/assets/306a3836-273b-4a9f-b670-48edafde1a21" />
+
+---
 
 
 
