@@ -235,6 +235,8 @@ Image 15: Data Location and Modelling
 **AWS Cloud Foundation Module 1 Knowledge Check Result**
 
   -  This module strengthened my core understanding of cloud computing, highlighting how cloud models offer significantly greater agility, cost savings, and governance compared to traditional university IT infrastructure.
+
+    
 ---
 
 
