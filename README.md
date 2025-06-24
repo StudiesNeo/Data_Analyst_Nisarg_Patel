@@ -308,15 +308,41 @@ Image 22: AWS Global infrastructure
 
 **Module 3 Knowledge**
 
-Image: Module 3 
+Image 23: Module 3 
 
 <img width="956" alt="Screenshot 2025-06-24 at 12 00 45 AM" src="https://github.com/user-attachments/assets/306a3836-273b-4a9f-b670-48edafde1a21" />
 
 ---
 
+**AWS IAM** 
 
+🔐 Shared Responsibility Model Focus (IAM/Access & Ops):
 
+  - AWS is responsible for securing the infrastructure (hardware, software, networking, and facilities).
+  - UCW is responsible for anything they deploy or configure within AWS (like access management, platform/software setup, and data handling).
 
+| **Component** | **UCW Responsibility**                                                            | **AWS Responsibility**                                                               |
+| ------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **EC2**       | Configure EC2 instances, manage access controls via IAM roles and policies        | Maintain physical servers, networking, hypervisor, and EC2 service availability      |
+| **Platform**  | Install and manage runtime environments (e.g., OS patches, libraries, middleware) | Provide platform hosting capabilities and manage availability infrastructure         |
+| **Software**  | Install, configure, secure, and update applications and services                  | None – software is user-managed                                                      |
+| **Dataset**   | Own, manage, secure, and classify datasets; ensure IAM access and encryption      | Provide underlying storage infrastructure (e.g., EBS, S3 reliability and durability) |
+
+Image 24: AWS IAM 
+
+![Screenshot 2025-06-24 at 12 10 03 AM](https://github.com/user-attachments/assets/ad84877d-f05a-4aa4-8844-ca8d5ce9c203)
+
+Image 25: AWS Module 4 Knowledge Check
+
+<img width="957" alt="Screenshot 2025-06-24 at 12 21 05 AM" src="https://github.com/user-attachments/assets/cb27cbe7-a89e-4acf-8e49-e76ec5dd0b51" />
+
+Image 26: Case Study 
+
+<img width="1780" alt="Screenshot 2025-06-24 at 12 38 09 AM" src="https://github.com/user-attachments/assets/f2a16acd-aaa1-4830-8446-7646b6be4f81" />
+
+Image 27: Case Study Submission Report 
+
+<img width="1780" alt="Screenshot 2025-06-24 at 12 38 53 AM" src="https://github.com/user-attachments/assets/e2293c9c-1349-44c7-82dc-c70885f51bdb" />
 
 
 
