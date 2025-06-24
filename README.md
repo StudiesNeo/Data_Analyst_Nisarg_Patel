@@ -200,14 +200,42 @@ We evaluated UCW’s on‑premise Data Center against a modern AWS-based cloud m
 
 Image 13: Traditional Computing Model vs Cloud Computing Model
 
+| **Aspect**             | **Traditional Computing Model**                    | **Cloud Computing Model (AWS)**                                                                  |
+| ---------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Dataset Location**   | Stored locally on UCW servers and hard drives      | Stored in AWS S3 using a structured multi-zone format (Raw → Cleaned → Curated)                  |
+| **Access**             | Restricted to VPN/university network               | Accessible globally via secure IAM roles and policies                                            |
+| **Privacy Management** | Manual policy management with limited auditability | Fine-grained IAM controls, encryption at rest, comprehensive logging, and tagging for compliance |
+
+
 ![Screenshot 2025-06-23 at 5 53 00 PM](https://github.com/user-attachments/assets/055fd59b-e673-4bd2-b37f-0e98440caf81)
 
 Image 14: Data Location and Modelling
+
+| **Cloud Model**   | **Dataset Location**                                                | **Access**                                                     | **Privacy & Security**                                                            |
+| ----------------- | ------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Private Cloud** | Stored internally on university servers                             | Restricted to the university’s internal network                | Fully managed in-house, limited auditing capabilities                             |
+| **Public Cloud**  | Stored in AWS S3 with a structured data-lake layout                 | Accessible over the internet via AWS IAM authentication        | Managed through IAM policies, MFA, encryption, and logging                        |
+| **Hybrid Cloud**  | Older student records on-premises; new data stored in AWS           | Access via a combination of internal network and cloud console | Requires integrated security policies spanning on-premises and cloud environments |
+| **Multi-Cloud**   | Distributed across multiple providers (AWS S3, Google Cloud, Azure) | Separate access mechanisms per provider                        | Privacy/compliance varies across providers and must be managed per platform       |
+
 
 ![Screenshot 2025-06-23 at 6 20 39 PM](https://github.com/user-attachments/assets/e0540d6f-5246-426a-9adf-39d3f41c4cb7)
 
 Image 15: Data Location and Modelling
 
+![Screenshot 2025-06-23 at 6 36 28 PM](https://github.com/user-attachments/assets/2062b409-c6b7-48f2-9a0c-05920ad66530)
+
+
+| **Model** | **Dataset Location**                       | **Access**                                        | **Privacy Management**                                         |
+| --------- | ------------------------------------------ | ------------------------------------------------- | -------------------------------------------------------------- |
+| **IaaS**  | Data uploaded manually to EC2 instances    | Requires EC2 SSH login                            | User controls firewalls and permissions                        |
+| **PaaS**  | Stored in S3 and processed via AWS Glue    | Launched through scheduled or on-demand Glue jobs | IAM roles manage data access and job execution                 |
+| **SaaS**  | Accessed through a web application/browser | Simple user login                                 | Privacy and security primarily managed by the service provider |
+
+**AWS Cloud Foundation Module 1 Knowledge Check Result**
+
+  -  This module strengthened my core understanding of cloud computing, highlighting how cloud models offer significantly greater agility, cost savings, and governance compared to traditional university IT infrastructure.
+---
 
 
 
