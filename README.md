@@ -191,7 +191,25 @@ AWS Glue Studio · AWS Athena · CloudWatch · draw.io · Excel
     - 28% of faculty teach more than four courses during peak semesters
     - Week 2 of each term consistently emerges as the highest workload period
     - Data enrichment enabled precise insights at the department level
+
 ---
+
+**AWS Deployment and Service Models**
+
+We evaluated UCW’s on‑premise Data Center against a modern AWS-based cloud model and found that migrating to AWS significantly enhances scalability, security, availability, and overall system agility, while reducing infrastructure constraints.
+
+Image 13: Traditional Computing Model vs Cloud Computing Model
+
+![Screenshot 2025-06-23 at 5 53 00 PM](https://github.com/user-attachments/assets/055fd59b-e673-4bd2-b37f-0e98440caf81)
+
+Image 14: Data Location and Modelling
+
+![Screenshot 2025-06-23 at 6 20 39 PM](https://github.com/user-attachments/assets/e0540d6f-5246-426a-9adf-39d3f41c4cb7)
+
+Image 15: Data Location and Modelling
+
+
+
 
 
 
